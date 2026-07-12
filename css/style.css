@@ -231,3 +231,48 @@ border-radius:15px;
 padding:20px;
 
 }
+
+/* =========================
+   LIGHT MODE
+========================= */
+
+body.light{
+    background:#f3f4f6;
+    color:#111827;
+}
+
+body.light .sidebar{
+    background:#ffffff;
+}
+
+body.light .main{
+    background:#f3f4f6;
+}
+
+body.light .card,
+body.light .chart-box,
+body.light .table-box{
+    background:#ffffff;
+    color:#111827;
+}
+
+body.light table{
+    background:#ffffff;
+}
+
+body.light th{
+    background:#e5e7eb;
+    color:#111827;
+}
+
+body.light td{
+    color:#111827;
+}
+
+body.light input,
+body.light select,
+body.light textarea{
+    background:#ffffff;
+    color:#111827;
+    border:1px solid #d1d5db;
+}
