@@ -14,6 +14,9 @@ let balance = 10000;
 let best = 0;
 let worst = 0;
 
+let highestBalance = balance;
+let maxDrawdown = 0;
+
 trades.forEach(t => {
 
     totalProfit += Number(t.profit);
@@ -24,6 +27,16 @@ trades.forEach(t => {
     }
 
     balance += Number(t.profit);
+
+    if (balance > highestBalance) {
+    highestBalance = balance;
+}
+
+const drawdown = highestBalance - balance;
+
+if (drawdown > maxDrawdown) {
+    maxDrawdown = drawdown;
+}
 
     equity.push(balance);
 
@@ -62,6 +75,8 @@ grossLoss === 0
 document.getElementById("profitFactor").innerHTML =
 profitFactor;
 
+document.getElementById("drawdown").innerHTML =
+"$" + maxDrawdown.toFixed(2);
 document.getElementById("winRate").innerHTML =
 total==0
 ?"0%"
