@@ -150,7 +150,44 @@ function renderTrades(){
 
 function deleteTrade(index){
 
-    function showImage(img){
+    function showImage(img)
+    
+    function editTrade(index){
+
+    const trade = trades[index];
+
+    document.getElementById("date").value = trade.date;
+    document.getElementById("pair").value = trade.pair;
+    document.getElementById("side").value = trade.side;
+    document.getElementById("entry").value = trade.entry;
+    document.getElementById("exit").value = trade.exit;
+    document.getElementById("sl").value = trade.sl;
+    document.getElementById("tp").value = trade.tp;
+    document.getElementById("lot").value = trade.lot;
+    document.getElementById("profit").value = trade.profit;
+    document.getElementById("result").value = trade.result;
+    document.getElementById("note").value = trade.note;
+
+    imageBase64 = trade.image || "";
+
+    if(imageBase64){
+        document.getElementById("preview").innerHTML = `
+            <img src="${imageBase64}"
+                 style="width:220px;
+                        margin-top:15px;
+                        border-radius:10px;
+                        border:2px solid #22c55e;">
+        `;
+    }else{
+        document.getElementById("preview").innerHTML = "";
+    }
+
+    // Hapus data lama agar setelah disimpan menjadi versi terbaru
+    trades.splice(index, 1);
+    saveTrades();
+    renderTrades();
+
+    }{
 
     if(!img){
 
