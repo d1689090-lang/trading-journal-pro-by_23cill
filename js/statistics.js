@@ -4,6 +4,9 @@ let win = 0;
 let lose = 0;
 let totalProfit = 0;
 
+let grossProfit = 0;
+let grossLoss = 0;
+
 let equity = [];
 
 let balance = 10000;
