@@ -270,3 +270,37 @@ ${trade.result},
     }
 
 }
+
+// =====================================
+// Filter Trade
+// =====================================
+
+function filterTrades() {
+
+    const filter = document.getElementById("filterResult").value;
+
+    tradeList.innerHTML = "";
+
+    trades.forEach((trade, index) => {
+
+        if (filter !== "ALL" && trade.result !== filter) {
+            return;
+        }
+
+        tradeList.innerHTML += `
+        <tr>
+            <td>${trade.date}</td>
+            <td>${trade.pair}</td>
+            <td>${trade.side}</td>
+            <td>$${trade.profit}</td>
+            <td>${trade.result}</td>
+            <td>
+                <button onclick="editTrade(${index})">✏️</button>
+                <button onclick="showImage('${trade.image}')">📷</button>
+                <button onclick="deleteTrade(${index})">🗑️</button>
+            </td>
+        </tr>
+        `;
+    });
+
+}
