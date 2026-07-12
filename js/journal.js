@@ -122,7 +122,11 @@ function renderTrades(){
 
         <td>
 
-        <button onclick="showImage('${trade.image}')">
+        <button onclick="editTrade(${index})">
+✏️
+</button>
+
+<button onclick="showImage('${trade.image}')">
 📷
 </button>
 
