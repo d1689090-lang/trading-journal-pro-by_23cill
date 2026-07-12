@@ -116,6 +116,15 @@ placeholder="Catatan Trading"></textarea>
 
 <h2>Riwayat Trading</h2>
 
+  <select id="filterResult" onchange="filterTrades()">
+    <option value="ALL">Semua Hasil</option>
+    <option value="WIN">WIN</option>
+    <option value="LOSE">LOSE</option>
+    <option value="BE">BREAK EVEN</option>
+</select>
+
+<br><br>
+
   <button onclick="exportCSV()">
 
 📤 Export CSV
