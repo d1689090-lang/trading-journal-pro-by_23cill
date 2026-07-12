@@ -94,3 +94,38 @@ candle.setData([
 {time:"2026-07-01",open:100,high:120,low:95,close:115},
 
 {time:"2026-07-02",open:115,high:125,low:110
+
+    // =========================
+// Dark Mode
+// =========================
+
+const themeBtn = document.getElementById("themeBtn");
+
+// Cek tema yang tersimpan
+if(localStorage.getItem("theme")=="light"){
+
+    document.body.classList.add("light");
+
+    themeBtn.innerHTML="🌞 Light Mode";
+
+}
+
+themeBtn.addEventListener("click",()=>{
+
+    document.body.classList.toggle("light");
+
+    if(document.body.classList.contains("light")){
+
+        localStorage.setItem("theme","light");
+
+        themeBtn.innerHTML="🌞 Light Mode";
+
+    }else{
+
+        localStorage.setItem("theme","dark");
+
+        themeBtn.innerHTML="🌙 Dark Mode";
+
+    }
+
+});
