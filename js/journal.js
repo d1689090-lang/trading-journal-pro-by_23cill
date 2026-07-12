@@ -13,6 +13,32 @@ const imageInput = document.getElementById("image");
 
 let imageBase64 = "";
 
+imageInput.addEventListener("change", function () {
+
+    const file = this.files[0];
+
+    if (!file) return;
+
+    const reader = new FileReader();
+
+    reader.onload = function () {
+
+        imageBase64 = reader.result;
+
+        document.getElementById("preview").innerHTML = `
+            <img src="${imageBase64}"
+                 style="width:220px;
+                        margin-top:15px;
+                        border-radius:10px;
+                        border:2px solid #22c55e;">
+        `;
+
+    };
+
+    reader.readAsDataURL(file);
+
+});
+
 // Tampilkan trade saat halaman dibuka
 renderTrades();
 
