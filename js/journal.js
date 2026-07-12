@@ -73,6 +73,10 @@ form.addEventListener("submit", function(e){
 
         note: document.getElementById("note").value
 
+        note: document.getElementById("note").value,
+
+image: imageBase64
+
     };
 
     trades.push(trade);
