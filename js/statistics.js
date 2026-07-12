@@ -54,6 +54,14 @@ document.getElementById("best").innerHTML =
 document.getElementById("worst").innerHTML =
 "$"+worst.toFixed(2);
 
+const profitFactor =
+grossLoss === 0
+? grossProfit.toFixed(2)
+: (grossProfit / grossLoss).toFixed(2);
+
+document.getElementById("profitFactor").innerHTML =
+profitFactor;
+
 document.getElementById("winRate").innerHTML =
 total==0
 ?"0%"
