@@ -122,11 +122,13 @@ function renderTrades(){
 
         <td>
 
-        <button onclick="deleteTrade(${index})">
+        <button onclick="showImage('${trade.image}')">
+📷
+</button>
 
-        🗑
-
-        </button>
+<button onclick="deleteTrade(${index})">
+🗑
+</button>
 
         </td>
 
@@ -147,7 +149,7 @@ function deleteTrade(index){
     if(confirm("Hapus trade?")){
 
         trades.splice(index,1);
-
+        
         saveTrades();
 
         renderTrades();
