@@ -1,1 +1,144 @@
+<!DOCTYPE html>
+<html lang="id">
 
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Trading Journal</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<div class="sidebar">
+
+<h2>📈 Trading Journal</h2>
+
+<ul>
+
+<li><a href="index.html">🏠 Dashboard</a></li>
+
+<li><a href="journal.html">📝 Journal</a></li>
+
+<li><a href="calendar.html">📅 Calendar</a></li>
+
+<li><a href="statistics.html">📊 Statistics</a></li>
+
+</ul>
+
+</div>
+
+<div class="main">
+
+<h1>Tambah Trade</h1>
+
+<form id="tradeForm">
+
+<input type="date" id="date" required>
+
+<input type="text"
+id="pair"
+placeholder="Pair (BTCUSDT)"
+required>
+
+<select id="side">
+
+<option value="BUY">BUY</option>
+
+<option value="SELL">SELL</option>
+
+</select>
+
+<input type="number"
+id="entry"
+placeholder="Entry Price"
+step="0.0001"
+required>
+
+<input type="number"
+id="exit"
+placeholder="Exit Price"
+step="0.0001"
+required>
+
+<input type="number"
+id="sl"
+placeholder="Stop Loss">
+
+<input type="number"
+id="tp"
+placeholder="Take Profit">
+
+<input type="number"
+id="lot"
+placeholder="Lot Size">
+
+<input type="number"
+id="profit"
+placeholder="Profit / Loss ($)"
+required>
+
+<select id="result">
+
+<option value="WIN">WIN</option>
+
+<option value="LOSE">LOSE</option>
+
+<option value="BE">BREAK EVEN</option>
+
+</select>
+
+<textarea
+id="note"
+placeholder="Catatan Trading"></textarea>
+
+<button type="submit">
+
+💾 Simpan Trade
+
+</button>
+
+</form>
+
+<h2>Riwayat Trading</h2>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Tanggal</th>
+
+<th>Pair</th>
+
+<th>Side</th>
+
+<th>Profit</th>
+
+<th>Result</th>
+
+<th>Aksi</th>
+
+</tr>
+
+</thead>
+
+<tbody id="tradeList">
+
+</tbody>
+
+</table>
+
+</div>
+
+<script src="js/journal.js"></script>
+
+</body>
+
+</html>
