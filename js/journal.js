@@ -9,6 +9,10 @@ let trades = JSON.parse(localStorage.getItem("trades")) || [];
 const form = document.getElementById("tradeForm");
 const tradeList = document.getElementById("tradeList");
 
+const imageInput = document.getElementById("image");
+
+let imageBase64 = "";
+
 // Tampilkan trade saat halaman dibuka
 renderTrades();
 
