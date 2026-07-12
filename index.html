@@ -1,1 +1,115 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>Trading Journal Pro</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<script src="https://unpkg.com/lightweight-charts/dist/lightweight-charts.standalone.production.js"></script>
+
+</head>
+
+<body>
+
+<!-- Sidebar -->
+<div class="sidebar">
+
+<h2>📈 Trading Journal</h2>
+
+<ul>
+
+<li><a href="index.html">🏠 Dashboard</a></li>
+
+<li><a href="journal.html">📝 Journal</a></li>
+
+<li><a href="calendar.html">📅 Calendar</a></li>
+
+<li><a href="statistics.html">📊 Statistics</a></li>
+
+</ul>
+
+</div>
+
+<!-- Main -->
+<div class="main">
+
+<h1>Dashboard</h1>
+
+<div class="cards">
+
+<div class="card">
+<h3>Portfolio</h3>
+<h2 id="portfolio">$10,000</h2>
+</div>
+
+<div class="card">
+<h3>Total Profit</h3>
+<h2 id="profit">$0</h2>
+</div>
+
+<div class="card">
+<h3>Win</h3>
+<h2 id="win">0</h2>
+</div>
+
+<div class="card">
+<h3>Lose</h3>
+<h2 id="lose">0</h2>
+</div>
+
+<div class="card">
+<h3>Win Rate</h3>
+<h2 id="winrate">0%</h2>
+</div>
+
+</div>
+
+<div class="chart-box">
+
+<h2>Candlestick Chart</h2>
+
+<div id="chart"></div>
+
+</div>
+
+<div class="table-box">
+
+<h2>Recent Trades</h2>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Tanggal</th>
+
+<th>Pair</th>
+
+<th>Side</th>
+
+<th>Profit</th>
+
+<th>Result</th>
+
+</tr>
+
+</thead>
+
+<tbody id="recentTrades">
+
+</tbody>
+
+</table>
+
+</div>
+
+</div>
+
+<script src="js/app.js"></script>
+
+</body>
+</html>
