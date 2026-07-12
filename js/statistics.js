@@ -17,6 +17,11 @@ let worst = 0;
 trades.forEach(t => {
 
     totalProfit += Number(t.profit);
+    if (Number(t.profit) > 0) {
+    grossProfit += Number(t.profit);
+} else {
+    grossLoss += Math.abs(Number(t.profit));
+    }
 
     balance += Number(t.profit);
 
