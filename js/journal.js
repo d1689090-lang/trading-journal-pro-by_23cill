@@ -146,6 +146,31 @@ function renderTrades(){
 
 function deleteTrade(index){
 
+    function showImage(img){
+
+    if(!img){
+
+        alert("Screenshot belum tersedia.");
+
+        return;
+
+    }
+
+    const win = window.open("", "_blank");
+
+    win.document.write(`
+        <html>
+        <head>
+            <title>Screenshot Trade</title>
+        </head>
+        <body style="margin:0;background:#111827;display:flex;justify-content:center;align-items:center;height:100vh;">
+            <img src="${img}" style="max-width:100%;max-height:100%;">
+        </body>
+        </html>
+    `);
+
+    }
+
     if(confirm("Hapus trade?")){
 
         trades.splice(index,1);
