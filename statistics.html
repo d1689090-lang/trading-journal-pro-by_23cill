@@ -1,1 +1,93 @@
+<!DOCTYPE html>
+<html lang="id">
 
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Trading Statistics</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+<div class="sidebar">
+
+<h2>📈 Trading Journal</h2>
+
+<ul>
+
+<li><a href="index.html">🏠 Dashboard</a></li>
+
+<li><a href="journal.html">📝 Journal</a></li>
+
+<li><a href="calendar.html">📅 Calendar</a></li>
+
+<li><a href="statistics.html">📊 Statistics</a></li>
+
+</ul>
+
+</div>
+
+<div class="main">
+
+<h1>Trading Statistics</h1>
+
+<div class="cards">
+
+<div class="card">
+<h3>Total Trade</h3>
+<h2 id="totalTrade">0</h2>
+</div>
+
+<div class="card">
+<h3>Win</h3>
+<h2 id="win">0</h2>
+</div>
+
+<div class="card">
+<h3>Lose</h3>
+<h2 id="lose">0</h2>
+</div>
+
+<div class="card">
+<h3>Win Rate</h3>
+<h2 id="winRate">0%</h2>
+</div>
+
+<div class="card">
+<h3>Total Profit</h3>
+<h2 id="profit">$0</h2>
+</div>
+
+<div class="card">
+<h3>Best Trade</h3>
+<h2 id="best">$0</h2>
+</div>
+
+<div class="card">
+<h3>Worst Trade</h3>
+<h2 id="worst">$0</h2>
+</div>
+
+</div>
+
+<div class="chart-box">
+
+<canvas id="equityChart"></canvas>
+
+</div>
+
+</div>
+
+<script src="js/statistics.js"></script>
+
+</body>
+
+</html>
