@@ -61,3 +61,63 @@ function saveTrades(){
     localStorage.setItem("trades", JSON.stringify(trades));
 
 }
+
+// =====================================
+// Render Table
+// =====================================
+
+function renderTrades(){
+
+    tradeList.innerHTML = "";
+
+    trades.forEach((trade,index)=>{
+
+        tradeList.innerHTML += `
+
+        <tr>
+
+        <td>${trade.date}</td>
+
+        <td>${trade.pair}</td>
+
+        <td>${trade.side}</td>
+
+        <td>$${trade.profit}</td>
+
+        <td>${trade.result}</td>
+
+        <td>
+
+        <button onclick="deleteTrade(${index})">
+
+        🗑
+
+        </button>
+
+        </td>
+
+        </tr>
+
+        `;
+
+    });
+
+}
+
+// =====================================
+// Delete Trade
+// =====================================
+
+function deleteTrade(index){
+
+    if(confirm("Hapus trade?")){
+
+        trades.splice(index,1);
+
+        saveTrades();
+
+        renderTrades();
+
+    }
+
+}
