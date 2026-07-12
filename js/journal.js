@@ -212,7 +212,54 @@ function deleteTrade(index){
 
     }
 
-    if(confirm("Hapus trade?")){
+    if(confirm("Hapus trade?"))
+    
+    // =====================================
+// Export CSV
+// =====================================
+
+function exportCSV() {
+
+    if (trades.length === 0) {
+        alert("Belum ada data trade.");
+        return;
+    }
+
+    let csv =
+"Date,Pair,Side,Entry,Exit,SL,TP,Lot,Profit,Result,Note\n";
+
+    trades.forEach(trade => {
+
+        csv +=
+`${trade.date},
+${trade.pair},
+${trade.side},
+${trade.entry},
+${trade.exit},
+${trade.sl},
+${trade.tp},
+${trade.lot},
+${trade.profit},
+${trade.result},
+"${trade.note}"\n`;
+
+    });
+
+    const blob = new Blob([csv], { type: "text/csv" });
+
+    const url = URL.createObjectURL(blob);
+
+    const a = document.createElement("a");
+
+    a.href = url;
+
+    a.download = "trading-journal.csv";
+
+    a.click();
+
+    URL.revokeObjectURL(url);
+
+}{
 
         trades.splice(index,1);
         
