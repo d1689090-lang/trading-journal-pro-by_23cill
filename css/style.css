@@ -41,17 +41,19 @@ body{
 }
 
 .sidebar a{
+    display:block;
     color:#cbd5e1;
     text-decoration:none;
-    display:block;
-    padding:12px;
+    padding:14px 16px;
+    margin-bottom:10px;
     border-radius:10px;
-    transition:.3s;
+    transition:0.3s;
+    font-weight:bold;
 }
-
 .sidebar a:hover{
-    background:#1e293b;
-    color:#22c55e;
+    background:#22c55e;
+    color:white;
+    transform:translateX(5px);
 }
 
 /* Main */
