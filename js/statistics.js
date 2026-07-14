@@ -136,3 +136,27 @@ tension:.4
 }
 
 });
+
+// =========================
+// Pie Chart WIN vs LOSE
+// =========================
+
+const resultCtx = document.getElementById("resultChart");
+
+new Chart(resultCtx, {
+
+    type: "pie",
+
+    data: {
+
+        labels: ["WIN", "LOSE"],
+
+        datasets: [{
+
+            data: [win, lose]
+
+        }]
+
+    }
+
+});
