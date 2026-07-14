@@ -103,6 +103,7 @@ profitFactor;
 
 document.getElementById("drawdown").innerHTML =
 "$" + maxDrawdown.toFixed(2);
+
 document.getElementById("winRate").innerHTML =
 total==0
 ?"0%"
