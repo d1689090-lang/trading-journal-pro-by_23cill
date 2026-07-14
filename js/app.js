@@ -65,7 +65,7 @@ document.getElementById("chart"),
 
 width: document.getElementById("chart").clientWidth,
 
-height:450,
+height:550,
 
 layout:{
 background:{
@@ -90,11 +90,9 @@ color:"#2b3648"
 const candle = chart.addCandlestickSeries();
 
 candle.setData([
-
-{time:"2026-07-01",open:100,high:120,low:95,close:115},
-
-{time:"2026-07-02",open:115,high:125,low:110
-
+    {time:"2026-07-01",open:100,high:120,low:95,close:115},
+    {time:"2026-07-02",open:115,high:125,low:110,close:120}
+]);
     // =========================
 // Dark Mode
 // =========================
