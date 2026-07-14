@@ -148,11 +148,17 @@ function renderTrades(){
 // Delete Trade
 // =====================================
 
-function deleteTrade(index){
+function editTrade(index){
+   ...
+}
 
-    function showImage(img)
-    
-    function editTrade(index){
+function deleteTrade(index){
+   ...
+}
+
+function showImage(img){
+   ...
+}
 
     const trade = trades[index];
 
