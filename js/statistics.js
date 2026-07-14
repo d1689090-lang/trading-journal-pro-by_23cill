@@ -7,6 +7,12 @@ let totalProfit = 0;
 let grossProfit = 0;
 let grossLoss = 0;
 
+let currentWinStreak = 0;
+let currentLoseStreak = 0;
+
+let maxWinStreak = 0;
+let maxLoseStreak = 0;
+
 let equity = [];
 
 let balance = 10000;
