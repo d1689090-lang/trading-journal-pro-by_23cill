@@ -56,6 +56,11 @@ body{
     transform:translateX(5px);
 }
 
+.sidebar a.active{
+    background:#22c55e;
+    color:white;
+}
+
 /* Main */
 
 .main{
