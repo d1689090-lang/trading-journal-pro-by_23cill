@@ -44,6 +44,26 @@ if (drawdown > maxDrawdown) {
 
     if(t.result=="LOSE") lose++;
 
+    if (t.result == "WIN") {
+
+    currentWinStreak++;
+    currentLoseStreak = 0;
+
+} else if (t.result == "LOSE") {
+
+    currentLoseStreak++;
+    currentWinStreak = 0;
+
+}
+
+if (currentWinStreak > maxWinStreak) {
+    maxWinStreak = currentWinStreak;
+}
+
+if (currentLoseStreak > maxLoseStreak) {
+    maxLoseStreak = currentLoseStreak;
+}
+
     if(Number(t.profit)>best) best=Number(t.profit);
 
     if(Number(t.profit)<worst) worst=Number(t.profit);
