@@ -92,6 +92,10 @@ body{
     margin-bottom:10px;
 }
 
+.card:hover{
+    transform:translateY(-5px);
+}
+
 .card h2{
     color:#22c55e;
 }
