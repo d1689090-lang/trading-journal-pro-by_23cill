@@ -149,8 +149,10 @@ function renderTrades(){
 // =====================================
 
 function editTrade(index){
-   ...
-}
+    
+    const trade = trades[index];
+
+    }
 
 function deleteTrade(index){
    ...
