@@ -127,3 +127,9 @@ themeBtn.addEventListener("click",()=>{
     }
 
 });
+
+window.addEventListener("resize", () => {
+    chart.applyOptions({
+        width: document.getElementById("chart").clientWidth
+    });
+});
