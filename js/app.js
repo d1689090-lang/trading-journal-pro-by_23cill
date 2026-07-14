@@ -81,11 +81,11 @@ color:"#2b3648"
 horzLines:{
 color:"#2b3648"
 }
-}
+},
 
-}
-
-);
+    crosshair:{
+    mode: LightweightCharts.CrosshairMode.Normal,
+},
 
 const candle = chart.addCandlestickSeries();
 
